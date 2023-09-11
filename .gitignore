@@ -1,0 +1,26 @@
+# Python complied files
+__pycache__/
+
+# Temporary files
+*#
+*~
+
+# PyCharm
+.idea/
+
+# Pyenv
+.python-version
+
+# PyTest
+.pytest_cache/
+
+# Sphinx documentation
+docs/build/
+
+# Environmental variables
+.env
+
+# Outputs
+build/
+dist/
+pycellino.egg-info/
