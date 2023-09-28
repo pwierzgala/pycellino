@@ -13,13 +13,13 @@ def support_groups(f: Callable) -> Callable:
     """
     def _f(
         df: pd.DataFrame,
-        group_columns: List[str] = None,
+        group_columns: List[str],
         **kwargs
     ) -> pd.DataFrame:
         if group_columns:
             groups = df.groupby(by=group_columns, group_keys=False)
             df = groups.apply(func=f, **kwargs)
         else:
-            df = f(df, **kwargs)
+            df = f(df=df, **kwargs)
         return df
     return _f
