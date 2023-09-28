@@ -65,6 +65,7 @@ def fill_with_regression(
         # Predict
         x_pred = xs[missing_values_mask]
         y_pred = model.predict(x=x_pred)
+        y_pred = y_pred.astype(df[y_column_name].dtype)
 
         # Fill missing values
         any_prediction_is_infinite = np.isinf(y_pred).any()
